@@ -1,6 +1,6 @@
 .mainSection {
     width: 400px;
-    margin: 0 auto;
+    margin: 100px auto;
     display: block;
     border-radius: 10px;
     background-image: url("./transparentBG.png");
@@ -8,8 +8,9 @@
 }
 
 body {
-    background-image: url("./statueofLib.jpg");
+    background: url("./statueofLib.jpg") no-repeat fixed center;
 }
+
 
 .headContent {
     width: 150px;
