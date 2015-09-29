@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>politics</title>
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/assets/scripts/app.min.js"></script>
+
+    <link href="/assets/styles.css" rel="stylesheet">
+
+</head>
+<body ng-controller="MainController">
+
+
+    <div class="mainSection">
+        </br>
+        <div class="headContent">
+            <h1>2016 Presidential Election</h1>
+        </div>
+
+
+        <button class="showCandidates" ng-click="candidates()">Get Candidates</button>
+        <div class = "allCandidates">
+
+            <h2 ng-show="showList">Democrat Candidates</h2>
+            <ul  ng-show="showList" class="candidateList">
+
+                <li class="candidateList"  ng-repeat="person in demList">{{person.name}}</li>
+
+            </ul>
+
+
+
+            <h2 ng-show="showList">Republican Candidates</h2>
+            <ul ng-show="showList" class="candidateList">
+
+                <li class="candidateList" ng-repeat="person in repList">{{person.name}}</li>
+
+            </ul>
+
+        </div>
+
+        <button class="winnerButton" ng-click="pickWinner()">Who Won??</button>
+
+        <h3 class="newPresident" ng-show="winner">{{winner.name}}</h3>
+
+        </br>
+    </div>
+</body>
+</html>
